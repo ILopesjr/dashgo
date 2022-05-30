@@ -1,5 +1,9 @@
-import { Flex, Text, Input, Icon } from '@chakra-ui/react';
-import { RiSearchLine } from 'react-icons/ri';
+import { Flex, Text, Input, Icon, HStack, Box, Avatar } from '@chakra-ui/react';
+import {
+  RiNotificationLine,
+  RiSearchLine,
+  RiUserAddFill,
+} from 'react-icons/ri';
 
 export function Header() {
   return (
@@ -19,6 +23,7 @@ export function Header() {
           .
         </Text>
       </Text>
+
       <Flex
         as="label"
         flex="1"
@@ -40,7 +45,37 @@ export function Header() {
           placeholder="Buscar na plataforma"
           _placeholder={{ color: 'gray.400' }}
         />
-        <Icon as={RiSearchLine} fontSize='20' />
+        <Icon as={RiSearchLine} fontSize="20" />
+      </Flex>
+
+      <Flex align="center" ml="auto">
+        <HStack
+          spacing="8"
+          mx="8"
+          pr="8"
+          py="1"
+          color="gray.300"
+          borderRightWidth={1}
+          borderColor="gray.700"
+        >
+          <Icon as={RiNotificationLine} fontSize="20" />
+          <Icon as={RiUserAddFill} fontSize="20" />
+        </HStack>
+
+        <Flex align="center">
+          <Box mr="4" textAlign="right">
+            <Text>Ivanildo Lopes</Text>
+            <Text color="gray.300" fontSize="small">
+              ivanildo.lopes.jr@gmail.com
+            </Text>
+          </Box>
+
+          <Avatar
+            size="md"
+            name="Ivanildo Lopes"
+            src="https://github.com/ilopesjr.png"
+          />
+        </Flex>
       </Flex>
     </Flex>
   );
