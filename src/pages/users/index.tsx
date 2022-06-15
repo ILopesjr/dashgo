@@ -15,7 +15,6 @@ import {
   Tr,
   useBreakpointValue,
 } from '@chakra-ui/react';
-import { log } from 'console';
 import Link from 'next/link';
 import { useState } from 'react';
 import { RiAddLine, RiPencilLine } from 'react-icons/ri';
@@ -88,7 +87,6 @@ export default function UserList() {
                 <Tbody>
                   {data.users.map((user) => {
                     return (
-                      <>
                         <Tr key={user.id}>
                           <Td px={['4', '4', '6']}>
                             <Checkbox colorScheme="pink" />
@@ -116,7 +114,6 @@ export default function UserList() {
                             </Button>
                           </Td>
                         </Tr>
-                      </>
                     );
                   })}
                 </Tbody>
